@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bf3a2598-b3b0-4c2f-b379-a56e490f8200" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prog2Refatored.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/colors/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Key.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Reserve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/Teacher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/EmptyVectorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/FullVectorException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/ReserveNotFoundedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exceptions/TeacherNotFoudedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/app.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/ReserveInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/ReserveRepo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/TeacherInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/presentation/TeacherRepo.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2JTJUPEQQBNOS657uT2ZSLjbSqR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "D:/Programação/PROJETOS/Java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="colors" />
+      <recent name="color" />
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="gui" />
+      <recent name="exceptions" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bf3a2598-b3b0-4c2f-b379-a56e490f8200" name="Changes" comment="" />
+      <created>1672096155951</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672096155951</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
