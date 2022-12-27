@@ -3,8 +3,7 @@ package presentation;
 import data.Teacher;
 import exceptions.EmptyVectorException;
 import exceptions.FullVectorException;
-import exceptions.ReserveNotFoundedException;
-import exceptions.TeacherNotFoudedException;
+import exceptions.TeacherNotFoundException;
 
 public class TeacherRepo implements TeacherInterface {
 
@@ -31,7 +30,7 @@ public class TeacherRepo implements TeacherInterface {
     }
 
     @Override
-    public void removeTeacher(String siape) throws TeacherNotFoudedException, EmptyVectorException {
+    public void removeTeacher(String siape) throws TeacherNotFoundException, EmptyVectorException {
         if (this.index >= 0) {
             boolean found = false;
             int indexFound = 0;
@@ -49,7 +48,7 @@ public class TeacherRepo implements TeacherInterface {
                 this.teacherArray[this.index] = null; // delete index empty
                 this.index = this.index - 1;
             } else {
-                throw new TeacherNotFoudedException();
+                throw new TeacherNotFoundException();
             }
         } else {
             throw new EmptyVectorException();
@@ -57,43 +56,38 @@ public class TeacherRepo implements TeacherInterface {
     }
 
     @Override
-    public void changeTeacher(String siape, Integer op, String newValue) throws EmptyVectorException, TeacherNotFoudedException {
+    public void changeTeacher(String siape, Integer op, String newValue) throws EmptyVectorException, TeacherNotFoundException {
         Teacher te = consultTeacher(siape);
         switch (op) {
-            case 1:
-                te.setName(newValue);
-                break;
-            case 2:
-                te.setSiape(newValue);
-                break;
-            case 3:
-                te.setAccessLevel(newValue);
+            case 1 -> te.setName(newValue);
+            case 2 -> te.setSiape(newValue);
+            case 3 -> te.setAccessLevel(newValue);
         }
     }
 
     @Override
-    public void updateTeacher(String siape) throws EmptyVectorException, TeacherNotFoudedException {
-        Teacher teold = this.consultTeacher(siape);
+    public void updateTeacher(String siape) throws EmptyVectorException, TeacherNotFoundException {
+        Teacher teOld = this.consultTeacher(siape);
     }
 
     @Override
-    public Teacher consultTeacher(String siape) throws TeacherNotFoudedException, EmptyVectorException {
+    public Teacher consultTeacher(String siape) throws TeacherNotFoundException, EmptyVectorException {
         Teacher t = null;
         if(this.index >=0){
-            boolean find = false;
-            int indexfind = 0;
+            boolean found = false;
+            int indexFound = 0;
             for(int i = 0; i <= this.index;i++){
                 if(siape.equals(this.teacherArray[i].getSiape())){
-                    indexfind = i;
-                    find = true;
+                    indexFound = i;
+                    found = true;
                     break;
                 }
             }
-            if(find == true){
-                t = this.teacherArray[indexfind];
+            if(found){
+                t = this.teacherArray[indexFound];
 
             }else{
-                throw new TeacherNotFoudedException();
+                throw new TeacherNotFoundException();
             }
         }else{
             throw new EmptyVectorException();

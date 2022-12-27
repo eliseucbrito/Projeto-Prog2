@@ -3,9 +3,7 @@ package presentation;
 import data.Reserve;
 import exceptions.EmptyVectorException;
 import exceptions.FullVectorException;
-import exceptions.ReserveNotFoundedException;
-
-import java.util.Date;
+import exceptions.ReserveNotFoundException;
 
 public class ReserveRepo implements ReserveInterface {
 
@@ -29,7 +27,7 @@ public class ReserveRepo implements ReserveInterface {
     }
 
     @Override
-    public void removeReserve(String id) throws ReserveNotFoundedException, EmptyVectorException {
+    public void removeReserve(String id) throws ReserveNotFoundException, EmptyVectorException {
         if (this.index >= 0) {
             boolean found = false;
             int indexFound = 0;
@@ -47,7 +45,7 @@ public class ReserveRepo implements ReserveInterface {
                 this.reserveArray[this.index] = null; // delete index empty
                 this.index = this.index - 1;
             } else {
-                throw new ReserveNotFoundedException();
+                throw new ReserveNotFoundException();
             }
         } else {
             throw new EmptyVectorException();
@@ -55,7 +53,7 @@ public class ReserveRepo implements ReserveInterface {
     }
 
     @Override
-    public void changeReserve(String id, Integer op, String newValue) throws EmptyVectorException, ReserveNotFoundedException {
+    public void changeReserve(String id, Integer op, String newValue) throws EmptyVectorException, ReserveNotFoundException {
         Reserve reserve;
         if (this.index >= 0) {
             reserve = consultReserve(id);
@@ -80,12 +78,12 @@ public class ReserveRepo implements ReserveInterface {
     }
 
     @Override
-    public void updateReserve(String id) throws EmptyVectorException, ReserveNotFoundedException {
+    public void updateReserve(String id) throws EmptyVectorException, ReserveNotFoundException {
         Reserve reOld = consultReserve(id);
     }
 
     @Override
-    public Reserve consultReserve(String id) throws ReserveNotFoundedException, EmptyVectorException {
+    public Reserve consultReserve(String id) throws ReserveNotFoundException, EmptyVectorException {
         Reserve reserve;
         if (this.index >= 0) {
             boolean found = false;
@@ -100,7 +98,7 @@ public class ReserveRepo implements ReserveInterface {
             if (found) {
                 reserve = this.reserveArray[indexFound];
             } else {
-                throw new ReserveNotFoundedException();
+                throw new ReserveNotFoundException();
             }
         } else {
             throw new EmptyVectorException();
