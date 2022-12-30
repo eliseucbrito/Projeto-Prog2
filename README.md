@@ -77,4 +77,5 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - **PERSISTENCE:** Camada que recupera os dados das classes e define seus novos valores
 - **EXCEPTIONS:** Nossas exceptions personalizadas
 - **BUSSINESS:** Regras de negócio
-- **PRESENTATION:** Interface gráfica para o usuário (GUI)
+- **PRESENTATION:** Camada que conecta as regras de negócio e a interface gráfica
+- **GUI:** Interface gráfica
