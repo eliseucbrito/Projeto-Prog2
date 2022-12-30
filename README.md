@@ -33,7 +33,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - instalou uma IDE para execução do código
   - Recomendação *Intellij / NetBeans / VScode*  
   - Instale também o GIT
-- Você instalou a SDK 17 do Java
+- Você instalou a SDK 18 do Java
 - Leia o guia do programa
   
 ## 🚀 Instalando o programa
