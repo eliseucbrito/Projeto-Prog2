@@ -1,8 +1,9 @@
-package presentation;
+package persistence;
 
 import data.Reserve;
 import exceptions.EmptyVectorException;
 import exceptions.FullVectorException;
+import exceptions.NoLevelException;
 import exceptions.ReserveNotFoundException;
 
 public class ReserveRepo implements ReserveInterface {
@@ -17,10 +18,17 @@ public class ReserveRepo implements ReserveInterface {
     }
 
     @Override
-    public void insertReserve(Reserve newReserve) throws FullVectorException {
+    public void insertReserve(Reserve newReserve) throws FullVectorException, NoLevelException {
         this.index = this.index + 1;
         if (this.index < MAX) {
-            reserveArray[this.index] = newReserve;
+            int teacherLevel = Integer.parseInt(newReserve.getTeacher().getAccessLevel());
+            int keyMinLevel = Integer.parseInt(newReserve.getKey().getMinLevel());
+
+            if (teacherLevel >= keyMinLevel) {
+                reserveArray[this.index] = newReserve;
+            } else {
+             throw new NoLevelException();
+            }
         } else {
             throw new FullVectorException();
         };

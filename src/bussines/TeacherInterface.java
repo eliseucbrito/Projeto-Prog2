@@ -3,10 +3,11 @@ package bussines;
 import data.Teacher;
 import exceptions.EmptyVectorException;
 import exceptions.FullVectorException;
+import exceptions.SiapeIsInUseException;
 import exceptions.TeacherNotFoundException;
 
 public interface TeacherInterface {
-    public void insertTeacher(Teacher te) throws FullVectorException;
+    public void insertTeacher(Teacher te) throws FullVectorException, TeacherNotFoundException, EmptyVectorException, SiapeIsInUseException;
     public void removeTeacher(String siape) throws TeacherNotFoundException, EmptyVectorException;
     public void changeTeacher(String siape, Integer op, String newValue) throws EmptyVectorException, TeacherNotFoundException;
     public void updateTeacher(String siape) throws EmptyVectorException, TeacherNotFoundException;

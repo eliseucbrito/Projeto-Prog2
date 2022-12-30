@@ -3,16 +3,25 @@ package bussines;
 import data.Teacher;
 import exceptions.EmptyVectorException;
 import exceptions.FullVectorException;
+import exceptions.SiapeIsInUseException;
 import exceptions.TeacherNotFoundException;
-import presentation.TeacherRepo;
+import persistence.ReserveRepo;
+import persistence.TeacherRepo;
 
 public class TeacherRegister implements TeacherInterface {
 
     private TeacherRepo teacherRepository;
 
+    public TeacherRegister() { this.teacherRepository = new TeacherRepo(); }
+
     @Override
-    public void insertTeacher(Teacher te) throws FullVectorException {
-         this.teacherRepository.insertTeacher(te);
+    public void insertTeacher(Teacher newTeacher) throws FullVectorException, TeacherNotFoundException, EmptyVectorException, SiapeIsInUseException {
+        Teacher siapeInUse = this.consultTeacher(newTeacher.getSiape());
+        if (siapeInUse == null) {
+            this.teacherRepository.insertTeacher(newTeacher);
+        } else {
+            throw new SiapeIsInUseException();
+        }
     }
 
     @Override
